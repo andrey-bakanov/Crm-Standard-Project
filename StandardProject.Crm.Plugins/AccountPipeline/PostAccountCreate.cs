@@ -12,7 +12,7 @@ namespace StandardProject.Crm.Plugins.AccountPipeline
     {
         public override void RegisterHandlers(PluginHandlerRegistrator store, PluginState state)
         {
-            //Выполняется настройка необходимых зависимостей, возможно IoC
+            //Perform setup for all necessary services, maybe use IoC
             IAccountRepository accountRepository = new AccountRepository(state.Service);
             IApplicationLogger logger = new TracingLogger(state.TraceService);
 

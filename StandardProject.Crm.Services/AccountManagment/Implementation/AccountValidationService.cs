@@ -27,7 +27,7 @@ namespace StandardProject.Crm.Services.AccountManagment.Implementation
         }
 
         /// <summary>
-        /// Perform verification for all account with specified  category code
+        /// Perform verification for all accounts with specified  category code
         /// </summary>
         /// <param name="code"></param>
         /// <returns></returns>

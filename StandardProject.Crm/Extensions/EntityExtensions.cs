@@ -62,5 +62,36 @@ namespace StandardProject.Crm.Extensions
             return default(T);
         }
 
+
+        /// <summary>
+        ///Convert entity to ActivityParty
+        /// </summary>
+        /// <param name="source">instance of Entity</param>
+        /// <returns></returns>
+        public static EntityCollection ToActivityPartyCollection(this Entity source)
+        {
+            Entity activityParty = new Entity();
+            activityParty.LogicalName = "activityparty";
+            activityParty.Attributes["partyid"] = source.ToEntityReference();
+            EntityCollection activityCollection = new EntityCollection();
+            activityCollection.Entities.Add(activityParty);
+            return activityCollection;
+        }
+
+
+        /// <summary>
+        ///Convert entity to ActivityParty
+        /// </summary>
+        /// <param name="source">instance of Entity</param>
+        /// <returns></returns>
+        public static Entity ToActivityParty(this Entity source)
+        {
+            Entity activityParty = new Entity();
+            activityParty.LogicalName = "activityparty";
+            activityParty.Attributes["partyid"] = source.ToEntityReference();
+
+            return activityParty;
+        }
+
     }
 }

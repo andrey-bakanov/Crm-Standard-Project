@@ -1,6 +1,6 @@
-﻿var Navicon = Navicon || {};
+﻿var STD = STD || {};
 
-Navicon.Account = (function () {
+STD.Account = (function () {
 
 
     var nameOnChange = function (context) {
